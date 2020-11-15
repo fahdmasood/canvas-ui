@@ -1,0 +1,26 @@
+{
+  "name": "canvas-ui",
+  "author": {
+    "name": "Fahd Masood",
+    "email": "fahdmasood99@hotmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fahdmasood/canvas-ui"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.0.0",
+    "next": "^10.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.0.0"
+  }
+}
