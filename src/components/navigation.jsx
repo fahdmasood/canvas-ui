@@ -255,7 +255,7 @@ const Navigation = props => {
                 background-color: #ededed;
                 color: #333333;
               `}
-              type='text'></input>
+              type='email'></input>
           </div>
           <div
             css={css`
