@@ -43,32 +43,6 @@ const Navigation = props => {
     <nav>
       <section
         css={css`
-          min-width: fit-content;
-          white-space: nowrap;
-          font-weight: 700;
-          user-select: none;
-          transition: color 200ms ease-in-out;
-
-          &:hover {
-            cursor: pointer;
-            color: #1a8fe3;
-          }
-        `}
-        onClick={() => setShowAccount(!showAccount)}>
-        Account
-      </section>
-      <section
-        css={css`
-          display: grid;
-          grid-template-columns: auto auto;
-          gap: 1rem;
-        `}>
-        <div css={buttonStyle}>New Party</div>
-        <div css={buttonStyle}>New Canvas</div>
-      </section>
-      <section />
-      <section
-        css={css`
           display: grid;
           grid-template-columns: auto auto auto auto;
           gap: 1.6rem;
@@ -110,18 +84,44 @@ const Navigation = props => {
           </a>
         </Link>
       </section>
+      <section />
+      <section
+        css={css`
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 1rem;
+        `}>
+        <div css={buttonStyle}>New Party</div>
+        <div css={buttonStyle}>New Canvas</div>
+      </section>
+      <section
+        css={css`
+          min-width: fit-content;
+          white-space: nowrap;
+          font-weight: 700;
+          user-select: none;
+          transition: color 200ms ease-in-out;
+
+          &:hover {
+            cursor: pointer;
+            color: #1a8fe3;
+          }
+        `}
+        onClick={() => setShowAccount(!showAccount)}>
+        Account
+      </section>
       <div
         css={css`
           position: absolute;
           top: 5.5rem;
-          left: ${showAccount ? '0.5rem' : '-20.5rem'};
+          right: ${showAccount ? '0.5rem' : '-20.5rem'};
           background-color: #fefefe;
           color: #666666;
           border-radius: 5px;
           overflow: hidden;
           height: fit-content;
           width: 20rem;
-          transition: left 0.2s ease-in-out, height 0.2s ease-in-out;
+          transition: right 0.2s ease-in-out, height 0.2s ease-in-out;
           z-index: 10;
           border: 1px solid #dedede;
         `}
