@@ -96,7 +96,6 @@ const Dashboard = props => {
                 <section
                   css={css`
                     background-color: #fefefe;
-                    border-left: 1px solid #222222;
                     color: #333333;
                     padding: 1rem;
                   `}>
@@ -192,7 +191,6 @@ const Dashboard = props => {
                 <section
                   css={css`
                     background-color: #fefefe;
-                    border-left: 1px solid #222222;
                     color: #333333;
                     padding: 1rem;
                   `}>

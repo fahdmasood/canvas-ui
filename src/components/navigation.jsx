@@ -17,6 +17,7 @@ const buttonStyle = css`
   &:hover {
     cursor: pointer;
     background-color: #1a8fe3;
+    color: #ffffff;
   }
 `;
 
@@ -91,8 +92,12 @@ const Navigation = props => {
           grid-template-columns: auto auto;
           gap: 1rem;
         `}>
-        <div css={buttonStyle}>New Party</div>
-        <div css={buttonStyle}>New Canvas</div>
+        <Link href='/party'>
+          <a css={buttonStyle}>New Party</a>
+        </Link>
+        <Link href='/drawing'>
+          <a css={buttonStyle}>New Canvas</a>
+        </Link>
       </section>
       <section
         css={css`

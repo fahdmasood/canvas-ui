@@ -28,10 +28,19 @@ const Index = props => {
         <title>Canvas.IO - Home</title>
       </Head>
       <main id='index'>
-        <section
+        <h2
           css={css`
             position: relative;
             top: 5rem;
+            width: 50vw;
+            margin: auto;
+          `}>
+          Discover
+        </h2>
+        <section
+          css={css`
+            position: relative;
+            top: 6rem;
             width: 50vw;
             height: 50px;
             margin: auto;
@@ -100,7 +109,6 @@ const Index = props => {
               <section
                 css={css`
                   background-color: #fefefe;
-                  border-left: 1px solid #222222;
                   color: #333333;
                   padding: 1rem;
                 `}>

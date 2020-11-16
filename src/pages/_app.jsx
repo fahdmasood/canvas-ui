@@ -1,6 +1,7 @@
 import '../assets/base.css';
 import Head from 'next/head';
 import Navigation from '../components/navigation';
+import Chat from '../components/chat';
 
 const Root = ({ Component, pageProps }) => {
   return (
@@ -18,6 +19,7 @@ const Root = ({ Component, pageProps }) => {
         />
       </Head>
       <Navigation />
+      <Chat />
       <Component {...pageProps} />
     </>
   );
