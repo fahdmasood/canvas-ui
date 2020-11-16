@@ -114,7 +114,7 @@ const Navigation = props => {
         css={css`
           position: absolute;
           top: 5.5rem;
-          right: ${showAccount ? '0.5rem' : '-20.5rem'};
+          right: ${showAccount ? '0.5rem' : '-30.5rem'};
           background-color: #fefefe;
           color: #666666;
           border-radius: 5px;
