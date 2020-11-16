@@ -120,7 +120,7 @@ const Navigation = props => {
           border-radius: 5px;
           overflow: hidden;
           height: fit-content;
-          width: 20rem;
+          width: 30rem;
           transition: right 0.2s ease-in-out, height 0.2s ease-in-out;
           z-index: 10;
           border: 1px solid #dedede;
