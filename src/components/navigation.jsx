@@ -108,7 +108,7 @@ const Navigation = props => {
           }
         `}
         onClick={() => setShowAccount(!showAccount)}>
-        Account
+        Account Settings
       </section>
       <div
         css={css`
