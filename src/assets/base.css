@@ -4,6 +4,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: #efefef;
 }
 
 * {
@@ -13,14 +14,15 @@ html {
 
 main {
   width: 100vw;
-  margin-top: 5rem;
   height: calc(100vh - 5rem);
   background-color: #efefef;
   z-index: -11;
+  padding-top: 2.5rem;
 }
 
 nav {
   width: calc(100% - 4rem);
+  background-color: #fff;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: auto 1fr auto auto;

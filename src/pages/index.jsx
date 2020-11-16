@@ -2,10 +2,16 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 
 const Index = props => {
-  const name = 'Canvas Name';
+  const name = 'Untitled Canvas';
   const users = 1;
   const views = 102;
   const canvases = [
+    { name, users, views },
+    { name, users, views },
+    { name, users, views },
+    { name, users, views },
+    { name, users, views },
+    { name, users, views },
     { name, users, views },
     { name, users, views },
     { name, users, views },
@@ -65,7 +71,7 @@ const Index = props => {
           css={css`
             position: relative;
             top: 7.5rem;
-            width: 60vw;
+            width: 50vw;
             margin: auto;
             max-height: calc(100vh - 5rem - 5rem - 5.7rem);
             display: grid;
@@ -76,13 +82,13 @@ const Index = props => {
             <div
               key={index}
               css={css`
-                height: 300px;
+                height: 200px;
                 background-color: #fefefe;
                 border: 1px solid #dedede;
                 border-radius: 5px;
                 background: url('https://picsum.photos/900/300?grayscale');
                 display: grid;
-                grid-template-columns: 1.5fr 1fr;
+                grid-template-columns: 1fr 1fr;
                 overflow: hidden;
 
                 &:hover {
@@ -93,9 +99,9 @@ const Index = props => {
               <section></section>
               <section
                 css={css`
-                  background-color: rgba(0, 0, 0, 0.7);
+                  background-color: #fefefe;
                   border-left: 1px solid #222222;
-                  color: #fefefe;
+                  color: #333333;
                   padding: 1rem;
                 `}>
                 <div
@@ -104,8 +110,20 @@ const Index = props => {
                   `}>
                   {canvas.name}
                 </div>
-                <div>Users: {canvas.users}</div>
-                <div>Views: {canvas.views}</div>
+                <div
+                  css={css`
+                    color: #4a8f62;
+                    margin-top: 0.5rem;
+                  `}>
+                  {canvas.users} {canvas.users === 1 ? 'user' : 'users'}
+                </div>
+                <div
+                  css={css`
+                    color: #da304c;
+                    margin-top: 0.5rem;
+                  `}>
+                  {canvas.views} {canvas.views === 1 ? 'view' : 'views'}
+                </div>
               </section>
             </div>
           ))}
