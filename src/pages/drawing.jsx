@@ -1,14 +1,14 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
 
-const Index = props => {
+const Drawing = props => {
   return (
-    <main id='index'>
+    <main id='drawing'>
       <Head>
-        <title>Canvas.IO - Home</title>
+        <title>Canvas.IO - Drawing</title>
       </Head>
     </main>
   );
 };
 
-export default Index;
+export default Drawing;

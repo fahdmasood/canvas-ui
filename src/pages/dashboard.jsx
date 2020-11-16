@@ -1,14 +1,14 @@
 import { css } from '@emotion/react';
 import Head from 'next/head';
 
-const Index = props => {
+const Dashboard = props => {
   return (
-    <main id='index'>
+    <main id='dashboard'>
       <Head>
-        <title>Canvas.IO - Home</title>
+        <title>Canvas.IO - Dashboard</title>
       </Head>
     </main>
   );
 };
 
-export default Index;
+export default Dashboard;
