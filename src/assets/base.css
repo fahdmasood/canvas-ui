@@ -22,7 +22,7 @@ nav {
   width: calc(100% - 4rem);
   padding: 0 2rem;
   display: grid;
-  grid-template-columns: auto auto 1fr auto;
+  grid-template-columns: auto 1fr auto auto;
   gap: 2rem;
   height: 5rem;
   line-height: 5rem;
