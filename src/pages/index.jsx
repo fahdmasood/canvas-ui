@@ -65,7 +65,7 @@ const Index = props => {
           css={css`
             position: relative;
             top: 7.5rem;
-            width: 90vw;
+            width: 60vw;
             margin: auto;
             max-height: calc(100vh - 5rem - 5rem - 5.7rem);
             display: grid;
@@ -74,6 +74,7 @@ const Index = props => {
           `}>
           {canvases.map((canvas, index) => (
             <div
+              key={index}
               css={css`
                 height: 300px;
                 background-color: #fefefe;
@@ -81,7 +82,7 @@ const Index = props => {
                 border-radius: 5px;
                 background: url('https://picsum.photos/900/300?grayscale');
                 display: grid;
-                grid-template-columns: 2fr 1fr;
+                grid-template-columns: 1.5fr 1fr;
                 overflow: hidden;
 
                 &:hover {

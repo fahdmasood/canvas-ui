@@ -122,7 +122,7 @@ const Navigation = props => {
           height: fit-content;
           width: 30rem;
           transition: right 0.2s ease-in-out, height 0.2s ease-in-out;
-          z-index: 10;
+          z-index: 999;
           border: 1px solid #dedede;
         `}
         id='account_settings'>
