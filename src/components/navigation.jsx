@@ -70,7 +70,7 @@ const Navigation = props => {
       <section
         css={css`
           display: grid;
-          grid-template-columns: auto auto auto auto auto;
+          grid-template-columns: auto auto auto auto;
           gap: 1.6rem;
         `}>
         <Link href='/'>
@@ -80,15 +80,6 @@ const Navigation = props => {
             `}
             onClick={() => setActiveTab('home')}>
             Home
-          </a>
-        </Link>
-        <Link href='/discover'>
-          <a
-            css={css`
-              color: ${activeTab === 'discover' ? '#1a8fe3' : '#666666'};
-            `}
-            onClick={() => setActiveTab('discover')}>
-            Discover
           </a>
         </Link>
         <Link href='/dashboard'>
