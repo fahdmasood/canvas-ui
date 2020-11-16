@@ -23,18 +23,21 @@ const buttonStyle = css`
 const formPickerStyle = css`
   height: 3rem;
   line-height: 3rem;
-  text-align: center;
-  transition: color 200ms ease-in-out;
+  padding-left: 1rem;
+  background-color: #fefefe;
+  transition: font-weight 200ms ease-in-out, background-color 200ms ease-in-out;
 
   &:hover {
-    color: #4a8f62;
+    font-weight: 700;
     cursor: pointer;
+    filter: brightness(95%);
   }
 `;
 
 const Navigation = props => {
   let [activeTab, setActiveTab] = useState('home');
   let [showAccount, setShowAccount] = useState(false);
+  let [formType, setFormType] = useState('login');
 
   return (
     <nav>
@@ -120,17 +123,16 @@ const Navigation = props => {
         css={css`
           position: absolute;
           top: 5.5rem;
-          left: 0.5rem;
+          left: ${showAccount ? '0.5rem' : '-20.5rem'};
           background-color: #fefefe;
           color: #666666;
           border-radius: 5px;
           overflow: hidden;
-          height: ${showAccount ? '20rem' : '0rem'};
-          width: ${showAccount ? '20rem' : '0rem'};
-          transition: height 0.2s ease-in-out, width 0.2s ease-in-out,
-            border 0.2s ease-in-out;
+          height: fit-content;
+          width: 20rem;
+          transition: left 0.2s ease-in-out, height 0.2s ease-in-out;
           z-index: 10;
-          border: ${showAccount ? '1px' : '0'} solid #dedede;
+          border: 1px solid #dedede;
         `}
         id='account_settings'>
         <section
@@ -139,17 +141,29 @@ const Navigation = props => {
             display: grid;
             grid-template-columns: 1fr 1fr;
           `}>
-          <div css={formPickerStyle} style={{}}>
-            Login
+          <div
+            css={formPickerStyle}
+            style={{
+              backgroundColor: formType === 'login' ? '#fefefe' : '#dedede',
+              fontWeight: formType === 'login' ? '700' : '400',
+            }}
+            onClick={() => setFormType('login')}>
+            Sign In
           </div>
-          <div css={formPickerStyle} style={{}}>
-            Register
+          <div
+            css={formPickerStyle}
+            style={{
+              backgroundColor: formType === 'register' ? '#fefefe' : '#dedede',
+              fontWeight: formType === 'register' ? '700' : '400',
+            }}
+            onClick={() => setFormType('register')}>
+            Sign Up
           </div>
         </section>
         <section
           css={css`
-            padding: 1rem;
-            display: block;
+            padding: 0 1rem 0 1rem;
+            display: ${formType === 'login' ? 'block' : 'none'};
           `}>
           <div
             css={css`
@@ -212,7 +226,99 @@ const Navigation = props => {
                   cursor: pointer;
                 }
               `}>
-              Login
+              Sign In
+            </button>
+          </div>
+        </section>
+        <section
+          css={css`
+            padding: 0 1rem 0 1rem;
+            display: ${formType === 'register' ? 'block' : 'none'};
+          `}>
+          <div
+            css={css`
+              display: grid;
+            `}>
+            <div
+              css={css`
+                font-size: 0.8rem;
+                height: 2rem;
+                line-height: 2rem;
+              `}>
+              email
+            </div>
+            <input
+              css={css`
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: none;
+                background-color: #ededed;
+                color: #333333;
+              `}
+              type='text'></input>
+          </div>
+          <div
+            css={css`
+              display: grid;
+            `}>
+            <div
+              css={css`
+                font-size: 0.8rem;
+                height: 2rem;
+                line-height: 2rem;
+              `}>
+              username
+            </div>
+            <input
+              css={css`
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: none;
+                background-color: #ededed;
+                color: #333333;
+              `}
+              type='text'></input>
+          </div>
+          <div
+            css={css`
+              display: grid;
+            `}>
+            <div
+              css={css`
+                font-size: 0.8rem;
+                height: 2rem;
+                line-height: 2rem;
+              `}>
+              password
+            </div>
+            <input
+              css={css`
+                padding: 0.5rem;
+                border-radius: 5px;
+                border: none;
+                background-color: #ededed;
+                color: #333333;
+              `}
+              type='password'></input>
+          </div>
+          <div>
+            <button
+              css={css`
+                height: 30px;
+                width: 100px;
+                border: none;
+                background-color: #4a8f62;
+                color: #ffffff;
+                font-size: 0.8rem;
+                border-radius: 5px;
+                transition: filter 200ms ease-in-out;
+
+                &:hover {
+                  filter: brightness(90%);
+                  cursor: pointer;
+                }
+              `}>
+              Sign Up
             </button>
           </div>
         </section>
