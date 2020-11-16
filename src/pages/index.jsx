@@ -15,12 +15,6 @@ const Index = props => {
     { name, users, views },
     { name, users, views },
     { name, users, views },
-    { name, users, views },
-    { name, users, views },
-    { name, users, views },
-    { name, users, views },
-    { name, users, views },
-    { name, users, views },
   ];
   return (
     <>

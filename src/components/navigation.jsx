@@ -93,10 +93,14 @@ const Navigation = props => {
           gap: 1rem;
         `}>
         <Link href='/party'>
-          <a css={buttonStyle}>New Party</a>
+          <a css={buttonStyle} onClick={() => setActiveTab('party')}>
+            New Party
+          </a>
         </Link>
         <Link href='/drawing'>
-          <a css={buttonStyle}>New Canvas</a>
+          <a css={buttonStyle} onClick={() => setActiveTab('drawing')}>
+            New Canvas
+          </a>
         </Link>
       </section>
       <section
